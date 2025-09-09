@@ -1,12 +1,12 @@
-function greeting(person)
+function add(n1, n2)
 {
-    console.log('Hello' + person)
+    console.log(n1 + n2);
 }
 
-greeting('Kara');
-greeting('Markus');
-greeting('Connor');
+add(3,2);
+add(100, 300);
 
-/*Función que genera saludos personalizados. 
-Recibe un nombre y devuelve un mensaje de bienvenida adaptado.
-Ideal para mensajes de welcome en webs, apps o emails automatizados.*/
+add(3, 'un string');
+
+/*Función que realiza sumas de números. Recibe dos o más valores numéricos y devuelve el resultado de la suma.
+ Soporta diferentes tipos de números (enteros, decimales) y puede manejar múltiples parámetros*/
