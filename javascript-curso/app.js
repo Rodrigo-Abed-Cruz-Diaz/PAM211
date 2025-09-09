@@ -1,32 +1,21 @@
-//tipos de datos
+//Variables en JS
 
-"Hello world" //String
-'Hello world' //String
+var nameuser = 'jhon';
+let lastname = 'carter';
 
-100000 //number
--2.3 //number
+//Reasignando valor de la variable nameuser
 
-//boolean
-true
-false
+var nameuser = 'pepe'
 
-//array
-['joe', 'ryan', 'martha']
-['1', '2', '3']
-[true, false, true, false]
+const PI = 3.1415;
 
-//object 
+console.log(PI);
 
-{
-    username: 'ryan'
-    score: 70.4
-    hours: 14
-    proffesional: true
-}
+//camelcase
 
-{
-    username: 'joe'
-    score: 0.4
-    hours: 1
-    proffesional: false
-}
+let username = 'gordon';
+
+/* Esta es otra forma 
+de comentar en JS, no es 
+necesario poner doble diagonal
+en cada renglon con este método*/
