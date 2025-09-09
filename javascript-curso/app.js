@@ -1,21 +1,12 @@
-//Variables en JS
+function greeting(person)
+{
+    console.log('Hello' + person)
+}
 
-var nameuser = 'jhon';
-let lastname = 'carter';
+greeting('Kara');
+greeting('Markus');
+greeting('Connor');
 
-//Reasignando valor de la variable nameuser
-
-var nameuser = 'pepe'
-
-const PI = 3.1415;
-
-console.log(PI);
-
-//camelcase
-
-let username = 'gordon';
-
-/* Esta es otra forma 
-de comentar en JS, no es 
-necesario poner doble diagonal
-en cada renglon con este método*/
+/*Función que genera saludos personalizados. 
+Recibe un nombre y devuelve un mensaje de bienvenida adaptado.
+Ideal para mensajes de welcome en webs, apps o emails automatizados.*/
