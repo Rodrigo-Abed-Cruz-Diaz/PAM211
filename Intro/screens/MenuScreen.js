@@ -17,6 +17,18 @@ export default function MenuScreen() {
             return <ContadorScreen/> ;
         case 'botones':
             return <BotonesScreen/> ;
+        case 'text':
+            return <TextScreen/> ;
+        case 'image':
+            return <ImageScreen/> ;
+        case 'scroll':
+            return <ScrollViewScreen/> ;
+        case 'activity':
+            return <ActivityIndicatorScreen/> ;
+        case 'flat':
+            return <FlatListScreen/> ;
+        case 'modal':
+            return <ModalScreen/> ;
         case 'menu':
             default:
             return (
