@@ -32,8 +32,9 @@ export default function MenuScreen() {
         case 'menu':
             default:
             return (
-                <View>
-                    <Text> Menu de Practicas </Text>
+                <View style={styles.container}>
+                    <Text style={styles.texto}> Menu de Practicas </Text>
+                    <View style={styles.botonesContainer}>
                     <Button onPress={()=>setScreen('contador')} title='Pract: Contador'></Button>
                     <Button onPress={()=>setScreen('botones')} title='Pract: Botones'></Button>
                     <Button onPress={()=>setScreen('text')} title='Pract: Text Input & Alert'></Button>
@@ -42,6 +43,7 @@ export default function MenuScreen() {
                     <Button onPress={()=>setScreen('activity')} title='Pract: ActivityIndicator'></Button>
                     <Button onPress={()=>setScreen('flat')} title='Pract: FlatList y Section List'></Button>
                     <Button onPress={()=>setScreen('modal')} title='Pract: Modal'></Button>
+                    </View>
                 </View>
             )
     }
@@ -49,4 +51,23 @@ export default function MenuScreen() {
 
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({ 
+    container: {
+    flex: 1,
+    backgroundColor: '#31312dff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  texto:{
+    color:'#a30707ff',
+    fontSize:30,
+    fontFamily: 'Time New Roman',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+  },
+  botonesContainer:{
+    marginTop: 10,
+    flexDirection: 'column',
+    gap: 20,  
+  }
+}) 
