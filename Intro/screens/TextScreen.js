@@ -21,7 +21,7 @@ export default function TextScreen() {
   }}
   return (
       <View style={styles.container}>
-        <Text style={styles.titulo}> TextScreen </Text>
+        <Text style={styles.titulo}> TextInput </Text>
         <TextInput
         style={styles.recuadro}
           placeholder='Escribe tu nombre'
