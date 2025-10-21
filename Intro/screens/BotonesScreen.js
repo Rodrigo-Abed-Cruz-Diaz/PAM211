@@ -10,26 +10,22 @@ export default function botonesScreen() {
     <View style={[styles.container, {backgroundColor}]}>
       <Text style={[styles.texto, {color: textColor}]}>Estado: {prendido ? 'Prendido' : 'Apagado'}</Text>
       <TouchableOpacity
-      style={styles.botonEncender}
-      onPress={()=> setPrendido(true)}>
-        <Text style={styles.textoBoton}>Prender</Text>
-
+       style={styles.botonEncender}
+       onPress={()=> setPrendido(true)}>
+       <Text style={styles.textoBoton}>Prender</Text>
       </TouchableOpacity>
       
-    <TouchableOpacity
+     <TouchableOpacity
       style={styles.botonApagar}
       onPress={()=> setPrendido(false)}>
-        <Text style={styles.textoBoton}>Apagar</Text> 
+      <Text style={styles.textoBoton}>Apagar</Text> 
     </TouchableOpacity>
 
     <View style = {styles.switchContainer}>
       <Text style = {[styles.switchLabel,{color: textColor}]}>Control de Switch: </Text>
       <Switch value = {prendido} onValueChange={setPrendido}> </Switch>
-    </View>
-
-      
-    </View>
-    
+    </View> 
+    </View> 
   ) 
 }
 
@@ -71,7 +67,5 @@ const styles = StyleSheet.create({
   switchLabel:{
     fontSize: 16,
     marginRight: 10,
-  },
-
-  
+  }, 
 })
