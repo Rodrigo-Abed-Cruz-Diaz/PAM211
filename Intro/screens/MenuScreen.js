@@ -38,7 +38,7 @@ export default function MenuScreen() {
                     <Button onPress={()=>setScreen('contador')} title='Pract: Contador'></Button>
                     <Button onPress={()=>setScreen('botones')} title='Pract: Botones'></Button>
                     <Button onPress={()=>setScreen('text')} title='Pract: Text Input & Alert'></Button>
-                    <Button onPress={()=>setScreen('image')} title='Pract: ImageBackground & SlapshScreen'></Button>
+                    <Button onPress={()=>setScreen('image')} title='Pract: ImageBackground & SplashScreen'></Button>
                     <Button onPress={()=>setScreen('scroll')} title='Pract: ScrollView'></Button>
                     <Button onPress={()=>setScreen('activity')} title='Pract: ActivityIndicator'></Button>
                     <Button onPress={()=>setScreen('flat')} title='Pract: FlatList y Section List'></Button>
