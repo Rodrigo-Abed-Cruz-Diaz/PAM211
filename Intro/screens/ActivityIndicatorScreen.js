@@ -19,7 +19,8 @@ export default function ActivityIndicatorScreen() {
       <View style={styles.container}>
         <Text style={styles.texto}> Presione para iniciar la carga </Text>
         <View style={styles.botonesContainer}>
-          {cargando ? (<ActivityIndicator size='large' color='red'></ActivityIndicator>) : (<Button color='brown' title='Presione para iniciar' onPress={carga}></Button>)}
+          {cargando ? (<ActivityIndicator size='large' color='red'></ActivityIndicator>) : 
+          (<Button color='brown' title='Presione para iniciar' onPress={carga}></Button>)}
         </View>
       </View>
     )
