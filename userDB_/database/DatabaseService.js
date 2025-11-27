@@ -60,6 +60,70 @@ class DatabaseService {
       };
     }
   }
+
+  async update(id, nombre) {
+    if (Platform.OS === 'web') {
+      const usuarios = await this.getAll();
+      const usuarioIndex = usuarios.findIndex(u => u.id === id);
+      
+      if (usuarioIndex === -1) {
+        throw new Error('Usuario no encontrado');
+      }
+
+      usuarios[usuarioIndex].nombre = nombre;
+      localStorage.setItem(this.storageKey, JSON.stringify(usuarios));
+
+      return usuarios[usuarioIndex];
+    } else {
+      const result = await this.db.runAsync(
+        'UPDATE usuarios SET nombre = ? WHERE id = ?',
+        nombre, id
+      );
+
+      if (result.changes === 0) {
+        throw new Error('Usuario no encontrado');
+      }
+
+      const usuarioActualizado = await this.db.getFirstAsync(
+        'SELECT * FROM usuarios WHERE id = ?',
+        id
+      );
+
+      return usuarioActualizado;
+    }
+  }
+
+  async delete(id) {
+    if (Platform.OS === 'web') {
+      const usuarios = await this.getAll();
+      const usuarioIndex = usuarios.findIndex(u => u.id === id);
+      
+      if (usuarioIndex === -1) {
+        throw new Error('Usuario no encontrado');
+      }
+
+      const usuarioEliminado = usuarios.splice(usuarioIndex, 1)[0];
+      localStorage.setItem(this.storageKey, JSON.stringify(usuarios));
+
+      return usuarioEliminado;
+    } else {
+      const usuarioEliminado = await this.db.getFirstAsync(
+        'SELECT * FROM usuarios WHERE id = ?',
+        id
+      );
+
+      if (!usuarioEliminado) {
+        throw new Error('Usuario no encontrado');
+      }
+
+      const result = await this.db.runAsync(
+        'DELETE FROM usuarios WHERE id = ?',
+        id
+      );
+
+      return usuarioEliminado;
+    }
+  }
 }
 
 export default new DatabaseService();
